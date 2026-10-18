@@ -1,0 +1,111 @@
+/* ============================================
+   BIRTHDAY SURPRISE — DESIGN VARIABLES
+   v1.4 VISUAL POLISH
+   ============================================ */
+
+:root {
+
+    /* ---------- MAIN COLORS ---------- */
+
+    --color-primary: #ff8fab;
+    --color-primary-light: #ffc2d1;
+    --color-primary-strong: #f06f99;
+    --color-primary-deep: #d85d88;
+
+    --color-secondary: #cdb4db;
+    --color-secondary-soft: #efe4fb;
+    --color-accent: #ffd166;
+    --color-accent-soft: #ffe8a8;
+
+    --color-white: #ffffff;
+    --color-cream: #fff8f0;
+    --color-peach: #ffe6d6;
+    --color-lavender: #efe5f8;
+
+
+    /* ---------- TEXT ---------- */
+
+    --color-text: #4a3f45;
+    --color-text-strong: #352d32;
+    --color-text-light: #7a6d74;
+    --color-text-muted: #6a5862;
+
+
+    /* ---------- BACKGROUND ---------- */
+
+    --gradient-background:
+        linear-gradient(
+            135deg,
+            #fff8f0 0%,
+            #ffe5ec 45%,
+            #eee5f5 100%
+        );
+
+
+    /* ---------- GLASS ---------- */
+
+    --glass-background:
+        rgba(255, 255, 255, 0.58);
+
+    --glass-background-strong:
+        rgba(255, 255, 255, 0.72);
+
+    --glass-border:
+        rgba(255, 255, 255, 0.82);
+
+
+    /* ---------- SHADOWS ---------- */
+
+    --shadow-soft:
+        0 12px 40px
+        rgba(120, 80, 100, 0.12);
+
+    --shadow-card:
+        0 18px 50px
+        rgba(120, 80, 100, 0.14);
+
+    --shadow-card-strong:
+        0 22px 55px
+        rgba(120, 80, 100, 0.14),
+        0 4px 14px rgba(120, 80, 100, 0.08);
+
+    --shadow-button:
+        0 8px 25px
+        rgba(255, 143, 171, 0.30);
+
+    --shadow-button-hover:
+        0 12px 32px
+        rgba(255, 143, 171, 0.38);
+
+
+    /* ---------- BORDER RADIUS ---------- */
+
+    --radius-card: 28px;
+    --radius-card-small: 20px;
+    --radius-button: 999px;
+
+
+    /* ---------- SPACING ---------- */
+
+    --space-xs: 6px;
+    --space-sm: 10px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+
+
+    /* ---------- ANIMATION ---------- */
+
+    --transition-fast:
+        0.2s ease;
+
+    --transition-smooth:
+        0.6s cubic-bezier(0.22, 1, 0.36, 1);
+
+    --transition-gentle:
+        0.9s cubic-bezier(0.22, 1, 0.36, 1);
+
+    --transition-button:
+        220ms cubic-bezier(0.22, 1, 0.36, 1);
+
+}

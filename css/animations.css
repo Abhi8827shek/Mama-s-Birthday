@@ -1,0 +1,1202 @@
+/* ============================================
+   BIRTHDAY SURPRISE — ANIMATIONS
+   ============================================ */
+
+
+/* ---------- Fade In ---------- */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* ---------- Fade In + Up ---------- */
+
+@keyframes fadeInUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ---------- Welcome Card ---------- */
+
+@keyframes welcomeCardIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(0.96);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ---------- Gentle Floating ---------- */
+
+@keyframes gentleFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px);
+
+    }
+
+}
+/* ============================================
+   QUESTION CARD ANIMATION
+   ============================================ */
+
+@keyframes questionCardIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(0.96);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+/* ============================================
+   MIDNIGHT SCENE ANIMATIONS
+   ============================================ */
+
+
+/* ---------- Star Twinkle ---------- */
+
+@keyframes starTwinkle {
+
+    0%,
+    100% {
+
+        opacity: 0.35;
+
+        transform:
+            scale(0.8);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            scale(1.3);
+
+    }
+
+}
+
+
+/* ---------- Star Fade ---------- */
+
+@keyframes starFadeOut {
+
+    from {
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* ---------- Moon Float ---------- */
+
+@keyframes moonFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px);
+
+    }
+
+}
+
+
+/* ---------- Button Glow ---------- */
+
+@keyframes buttonGlow {
+
+    0%,
+    100% {
+
+        box-shadow:
+            0 0 18px
+            rgba(255, 255, 255, 0.08);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 32px
+            rgba(255, 225, 170, 0.25);
+
+    }
+
+}
+/* ============================================
+   CELEBRATION SPACE ANIMATIONS
+   ============================================ */
+
+@keyframes ambientPulse {
+
+    0%,
+    100% {
+
+        opacity: 0.6;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.95);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.08);
+
+    }
+
+}
+
+
+@keyframes fairyLightGlow {
+
+    0%,
+    100% {
+
+        opacity: 0.45;
+
+        transform:
+            scale(0.8);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            scale(1.25);
+
+    }
+
+}
+
+
+@keyframes sparkleFloat {
+
+    0%,
+    100% {
+
+        opacity: 0.25;
+
+        transform:
+            translateY(0)
+            scale(0.8)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            translateY(-15px)
+            scale(1.15)
+            rotate(15deg);
+
+    }
+
+}
+/* ============================================
+   BALLOON RISING
+   ============================================ */
+
+@keyframes balloonRise {
+
+    0% {
+
+        bottom: -180px;
+
+        transform:
+            translateX(0)
+            rotate(var(--rotation));
+
+        opacity: 0;
+
+    }
+
+
+    8% {
+
+        opacity: 1;
+
+    }
+
+
+    50% {
+
+        transform:
+            translateX(20px)
+            rotate(
+                calc(var(--rotation) + 4deg)
+            );
+
+    }
+
+
+    75% {
+
+        transform:
+            translateX(-20px)
+            rotate(
+                calc(var(--rotation) - 4deg)
+            );
+
+    }
+
+
+    100% {
+
+        bottom: 115vh;
+
+        transform:
+            translateX(10px)
+            rotate(var(--rotation));
+
+        opacity: 0.95;
+
+    }
+
+}
+/* ============================================
+   CELEBRATION CONFETTI
+   ============================================ */
+
+.celebration-confetti {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 20;
+
+}
+
+
+.celebration-confetti span {
+
+    position: absolute;
+
+    top: -30px;
+
+    font-size:
+        18px;
+
+    opacity: 0.9;
+
+    animation:
+        celebrationConfettiFall
+        linear
+        forwards;
+
+}
+
+
+@keyframes celebrationConfettiFall {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(0.7);
+
+        opacity: 1;
+
+    }
+
+
+    100% {
+
+        transform:
+            translateY(115vh)
+            rotate(720deg)
+            scale(1.2);
+
+        opacity: 0;
+
+    }
+
+}
+/* ============================================
+   CAKE ANIMATIONS
+   ============================================ */
+
+@keyframes cakeGlow {
+
+    0%,
+    100% {
+
+        transform:
+            scale(0.95);
+
+        opacity: 0.6;
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.08);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+@keyframes flameFlicker {
+
+    0%,
+    100% {
+
+        transform:
+            translateX(-50%)
+            scale(1)
+            rotate(-3deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateX(-50%)
+            scale(1.12)
+            rotate(3deg);
+
+    }
+
+}
+
+
+@keyframes cakeComplete {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px)
+            scale(0.95);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+/* ============================================
+   CAKE CUTTING
+   ============================================ */
+
+.cake-cutting .cake {
+
+    animation:
+        cakeCut
+        1s
+        ease-in-out;
+
+}
+
+
+@keyframes cakeCut {
+
+    0% {
+
+        transform:
+            translateX(0)
+            rotate(0);
+
+    }
+
+    35% {
+
+        transform:
+            translateX(-8px)
+            rotate(-2deg);
+
+    }
+
+    65% {
+
+        transform:
+            translateX(8px)
+            rotate(2deg);
+
+    }
+
+    100% {
+
+        transform:
+            translateX(0)
+            rotate(0);
+
+    }
+
+}
+/* ============================================
+   FALLING STAR CELEBRATION
+   ============================================ */
+
+.falling-stars {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 30;
+
+}
+
+
+.falling-star {
+
+    position: absolute;
+
+    display: block;
+
+    color: #ffd166;
+
+    opacity: 0;
+
+    text-shadow:
+        0 0 6px
+        rgba(255, 209, 102, 0.7),
+
+        0 0 14px
+        rgba(255, 209, 102, 0.35);
+
+    animation-name:
+        fallingStar;
+
+    animation-timing-function:
+        linear;
+
+    animation-fill-mode:
+        forwards;
+
+}
+
+
+@keyframes fallingStar {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateX(0)
+            translateY(0)
+            rotate(0deg)
+            scale(0.7);
+
+    }
+
+
+    10% {
+
+        opacity: 0.9;
+
+    }
+
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            translateX(
+                calc(
+                    var(--star-drift) * 0.5
+                )
+            )
+            translateY(45vh)
+            rotate(
+                calc(
+                    var(--star-rotation) * 0.5
+                )
+            )
+            scale(1);
+
+    }
+
+
+    85% {
+
+        opacity: 0.8;
+
+    }
+
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translateX(
+                var(--star-drift)
+            )
+            translateY(115vh)
+            rotate(
+                var(--star-rotation)
+            )
+            scale(0.85);
+
+    }
+
+}
+
+
+
+@keyframes cakeParticle {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                0,
+                0
+            )
+            scale(0.4)
+            rotate(0deg);
+
+    }
+
+
+    15% {
+
+        opacity: 1;
+
+    }
+
+
+    55% {
+
+        opacity: 1;
+
+    }
+
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                var(--particle-x),
+                var(--particle-y)
+            )
+            scale(1.15)
+            rotate(180deg);
+
+    }
+
+}
+
+
+@keyframes cakeParticle {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(0, 0)
+            scale(0.5);
+
+    }
+
+    20% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                calc(
+                    (var(--random-x, 1) - 0.5)
+                    * 300px
+                ),
+                -180px
+            )
+            scale(1.2);
+
+    }
+
+}
+/* ============================================
+   GIFT ANIMATIONS — v0.9
+   ============================================ */
+
+@keyframes giftFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-10px);
+
+    }
+
+}
+
+
+@keyframes giftGlow {
+
+    0%,
+    100% {
+
+        opacity: 0.6;
+
+        transform:
+            scale(0.95);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            scale(1.08);
+
+    }
+
+}
+
+
+@keyframes giftStarTwinkle {
+
+    0%,
+    100% {
+
+        opacity: 0.25;
+
+        transform:
+            scale(0.8)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            scale(1.2)
+            rotate(20deg);
+
+    }
+
+}
+/* ============================================
+   GIFT OPENING — SHAKE
+   ============================================ */
+
+.gift-shaking .gift-box {
+
+    animation:
+        giftShake
+        0.9s
+        ease-in-out
+        forwards;
+
+}
+
+
+@keyframes giftShake {
+
+    0% {
+
+        transform:
+            translateX(0)
+            rotate(0deg);
+
+    }
+
+    15% {
+
+        transform:
+            translateX(-7px)
+            rotate(-2deg);
+
+    }
+
+    30% {
+
+        transform:
+            translateX(7px)
+            rotate(2deg);
+
+    }
+
+    45% {
+
+        transform:
+            translateX(-6px)
+            rotate(-1.5deg);
+
+    }
+
+    60% {
+
+        transform:
+            translateX(6px)
+            rotate(1.5deg);
+
+    }
+
+    75% {
+
+        transform:
+            translateX(-3px)
+            rotate(-1deg);
+
+    }
+
+    90% {
+
+        transform:
+            translateX(2px)
+            rotate(0.5deg);
+
+    }
+
+    100% {
+
+        transform:
+            translateX(0)
+            rotate(0deg);
+
+    }
+
+}
+/* ============================================
+   GIFT OPENING — LID
+   ============================================ */
+
+.gift-opening .gift-lid {
+
+    animation:
+        giftLidOpen
+        1.2s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        )
+        forwards;
+
+}
+
+
+@keyframes giftLidOpen {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        transform-origin:
+            center bottom;
+
+    }
+
+
+    25% {
+
+        transform:
+            translateY(-8px)
+            rotate(-3deg);
+
+    }
+
+
+    60% {
+
+        transform:
+            translateY(-55px)
+            rotate(-10deg);
+
+    }
+
+
+    100% {
+
+        transform:
+            translateY(-85px)
+            rotate(-14deg);
+
+    }
+
+}
+@keyframes giftRevealGlow {
+
+    0% {
+
+        opacity: 0.5;
+
+        transform:
+            scale(1);
+
+    }
+
+
+    50% {
+
+        opacity: 0.9;
+
+        transform:
+            scale(1.15);
+
+    }
+
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            scale(1.3);
+
+    }
+
+}
+/* ============================================
+   GIFT INSIDE GLOW
+   ============================================ */
+
+@keyframes giftInsideGlow {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translateX(-50%)
+            scale(0.3);
+
+    }
+
+
+    35% {
+
+        opacity: 1;
+
+        transform:
+            translateX(-50%)
+            scale(0.8);
+
+    }
+
+
+    70% {
+
+        opacity: 0.95;
+
+        transform:
+            translateX(-50%)
+            scale(1.15);
+
+    }
+
+
+    100% {
+
+        opacity: 0.75;
+
+        transform:
+            translateX(-50%)
+            scale(1);
+
+    }
+
+}
+/* ============================================
+   GIFT STAR RISING
+   ============================================ */
+
+@keyframes giftStarRise {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                0,
+                0
+            )
+            scale(0.4)
+            rotate(0deg);
+
+    }
+
+
+    15% {
+
+        opacity: 1;
+
+    }
+
+
+    55% {
+
+        opacity: 0.9;
+
+        transform:
+            translate(
+                calc(
+                    var(--gift-star-drift) * 0.5
+                ),
+                -150px
+            )
+            scale(1)
+            rotate(
+                calc(
+                    var(--gift-star-rotation) * 0.5
+                )
+            );
+
+    }
+
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                var(--gift-star-drift),
+                -300px
+            )
+            scale(0.7)
+            rotate(
+                var(--gift-star-rotation)
+            );
+
+    }
+
+}
+/* ============================================
+   LETTER SCENE ANIMATIONS
+   ============================================ */
+
+@keyframes letterStarTwinkle {
+
+    0%,
+    100% {
+
+        opacity: 0.2;
+
+        transform:
+            scale(0.8);
+
+    }
+
+    50% {
+
+        opacity: 0.7;
+
+        transform:
+            scale(1.15);
+
+    }
+
+}
+/* ============================================
+   LETTER CURSOR
+   ============================================ */
+
+@keyframes letterCursorBlink {
+
+    0%,
+    45% {
+
+        opacity: 1;
+
+    }
+
+    46%,
+    100% {
+
+        opacity: 0;
+
+    }
+
+}
+@keyframes photoStarTwinkle {
+
+    0%,
+    100% {
+
+        opacity:
+            0.2;
+
+        transform:
+            scale(0.8);
+
+    }
+
+    50% {
+
+        opacity:
+            0.65;
+
+        transform:
+            scale(1.15);
+
+    }
+
+}
+@keyframes finalStarTwinkle {
+
+    0%,
+    100% {
+
+        opacity:
+            0.2;
+
+        transform:
+            scale(0.8);
+
+    }
+
+    50% {
+
+        opacity:
+            0.7;
+
+        transform:
+            scale(1.15);
+
+    }
+
+}
